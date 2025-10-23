@@ -1,0 +1,54 @@
+Start time: 12:17:27 on May 13,2024
+qverilog .\AXI_Stream_Signal.sv 
+-- Compiling module top
+
+Top level modules:
+	top
+# vsim -lib work work.top -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.top(fast)
+# run -all
+# dest_addr da_addr = 84 106 55 4 6 199
+# sender_addr sa_addr = 55 113 155 156 36 57
+# ethertype  = 77 18
+# session_param session_id = ff
+# key_param key_id = 2c
+# payload packet= 187 77 231 35 221 36 43 105 87 237 132 195 11 238 205 4 153 132 211 194 85 85 152 120 248 24 50 179 72 93
+# fame : 1416247044 113719153 2610701369 1293050111 750472679 601695275 1767370116 3272339149 77169875 3260372376 2029525042 3007864064
+# frame [0] = [546a3704]
+# frame [1] = [6c73771]
+# frame [2] = [9b9c2439]
+# frame [3] = [4d1260ff]
+# frame [4] = [2cbb4de7]
+# frame [5] = [23dd242b]
+# frame [6] = [6957ed84]
+# frame [7] = [c30beecd]
+# frame [8] = [49984d3]
+# frame [9] = [c2555598]
+# frame [10] = [78f81832]
+# frame [11] = [b3485d00]
+# da_addr_check=84 106 55 4 6 199
+# sa_addr_check=55 113 155 156 36 57
+# ethertype_check=77 18
+# session_id_check=ff
+# key_id_check=2c
+# packet_check=77 231 35 221 36 43 105 87 237 132 195 11 238 205 4 153 132 211 194 85 85 152 120 248 24 50 179 72 93 0
+# ** Note: $finish    : ./AXI_Stream_Signal.sv(101)
+#    Time: 100 ns  Iteration: 0  Instance: /top
+# End time: 12:17:30 on May 13,2024, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0

@@ -1,0 +1,351 @@
+# vsim -voptargs="+acc" top -c -do "run -all;exit" 
+# Start time: 23:08:38 on Oct 09,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.axi_str_inf(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.axi_agent_pkg(fast)
+# Loading work.mac_agent_pkg(fast)
+# Loading work.env_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.axi_str_inf(fast__2)
+# Loading /tools/mentor/questa/2023.4/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test mac_ipv4_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ------------------------------------------------------------------
+# Name                           Type                    Size  Value
+# ------------------------------------------------------------------
+# uvm_test_top                   mac_ipv4_test           -     @486 
+#   env                          env                     -     @493 
+#     mac_ag                     mac_agent               -     @515 
+#       mac_mon                  mac_monitor             -     @632 
+#       sequencer                mac_sqr                 -     @523 
+#         rsp_export             uvm_analysis_export     -     @530 
+#         seq_item_export        uvm_seq_item_pull_imp   -     @624 
+#         arbitration_queue      array                   0     -    
+#         lock_queue             array                   0     -    
+#         num_last_reqs          integral                32    'd1  
+#         num_last_rsps          integral                32    'd1  
+#     master_uvc                 uvm_agent               -     @500 
+#       master_agent[0]          uvm_agent               -     @646 
+#         master_drv             uvm_driver #(REQ,RSP)   -     @657 
+#           rsp_port             uvm_analysis_port       -     @672 
+#           seq_item_port        uvm_seq_item_pull_port  -     @664 
+#         master_mon             uvm_monitor             -     @789 
+#           item_collected_port  uvm_analysis_port       -     @796 
+#         master_seqr            uvm_sequencer           -     @680 
+#           rsp_export           uvm_analysis_export     -     @687 
+#           seq_item_export      uvm_seq_item_pull_imp   -     @781 
+#           arbitration_queue    array                   0     -    
+#           lock_queue           array                   0     -    
+#           num_last_reqs        integral                32    'd1  
+#           num_last_rsps        integral                32    'd1  
+# ------------------------------------------------------------------
+# 
+# run test start
+# initilize
+#  after initilize
+# after create conv_h
+# after conneted sequencer
+# seq start
+# UVM_INFO ../TEST/mac_ipv4_seq.svh(22) @ 0: uvm_test_top.env.mac_ag.sequencer@@seq_h [mac_ipv4_seq] Starting MAC minimum packet (randomized with fixed constraints)...
+# ------------------------------------------------------------------------------------------
+# Name                           Type          Size  Value                                  
+# ------------------------------------------------------------------------------------------
+# pkt                            mac_seq_item  -     @824                                   
+#   dst_mac                      integral      48    'h112233445566                         
+#   src_mac                      integral      48    'haabbccddeeff                         
+#   vlan_id                      integral      12    'd0                                    
+#   pcp                          integral      3     'd0                                    
+#   dei                          integral      1     'd0                                    
+#   eth_type                     integral      16    'h800                                  
+#   payload                      da(integral)  46    -                                      
+#     [0]                        integral      8     'haa                                   
+#     [1]                        integral      8     'haa                                   
+#     [2]                        integral      8     'haa                                   
+#     [3]                        integral      8     'haa                                   
+#     [4]                        integral      8     'haa                                   
+#     ...                        ...           ...   ...                                    
+#     [41]                       integral      8     'haa                                   
+#     [42]                       integral      8     'haa                                   
+#     [43]                       integral      8     'haa                                   
+#     [44]                       integral      8     'haa                                   
+#     [45]                       integral      8     'haa                                   
+#   fcs                          integral      32    'hdeadbeef                             
+#   begin_time                   time          64    0                                      
+#   depth                        int           32    'd2                                    
+#   parent sequence (name)       string        5     seq_h                                  
+#   parent sequence (full name)  string        39    uvm_test_top.env.mac_ag.sequencer.seq_h
+#   sequencer                    string        33    uvm_test_top.env.mac_ag.sequencer      
+# ------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------
+# Name                           Type               Size  Value                                                           
+# ------------------------------------------------------------------------------------------------------------------------
+# req                            uvm_sequence_item  -     @836                                                            
+#   pkt_start_time_ps            real               64    0.000000                                                        
+#   pkt_end_time_ps              real               64    0.000000                                                        
+#   total_bytes                  integral           16    'd0                                                             
+#   no_of_bytes                  integral           16    'd0                                                             
+#   pkt_len                      integral           32    'd0                                                             
+#   pkt_num                      integral           32    'h0                                                             
+#   tdata_q                      da(integral)       0     -                                                               
+#   tkeep_q                      da(integral)       0     -                                                               
+#   tuser                        integral           32    'h0                                                             
+#   depth                        int                32    'd2                                                             
+#   parent sequence (name)       string             8     conv_seq                                                        
+#   parent sequence (full name)  string             64    uvm_test_top.env.master_uvc.master_agent[0].master_seqr.conv_seq
+#   sequencer                    string             55    uvm_test_top.env.master_uvc.master_agent[0].master_seqr         
+# ------------------------------------------------------------------------------------------------------------------------
+# req after create
+# after release
+# before driver call get next item
+# req after start
+# after convert
+# pkt_len=17
+# total_bytes_temp = 68, j = 4
+# total_bytes_temp = 64, j = 4
+# total_bytes_temp = 60, j = 4
+# total_bytes_temp = 56, j = 4
+# total_bytes_temp = 52, j = 4
+# total_bytes_temp = 48, j = 4
+# total_bytes_temp = 44, j = 4
+# total_bytes_temp = 40, j = 4
+# total_bytes_temp = 36, j = 4
+# total_bytes_temp = 32, j = 4
+# total_bytes_temp = 28, j = 4
+# total_bytes_temp = 24, j = 4
+# total_bytes_temp = 20, j = 4
+# total_bytes_temp = 16, j = 4
+# total_bytes_temp = 12, j = 4
+# total_bytes_temp = 8, j = 4
+# total_bytes_temp = 4, j = 4
+# after rendomize
+# UVM_INFO ../ENV/mac_agent/mac_to_axi_seq.svh(53) @ 10000: uvm_test_top.env.master_uvc.master_agent[0].master_seqr@@conv_seq [MAC_TO_AXI_SEQ] MAC size=17 | data_q size=17 | tdata_q size=17
+# afte info
+# after driver call get next item
+# UVM_INFO ../ENV/axi_agent/axi_str_mas_driver.sv(67) @ 10000: uvm_test_top.env.master_uvc.master_agent[0].master_drv [uvm_test_top.env.master_uvc.master_agent[0].master_drv] req data in driver : ------------------------------------------------------------------------------------------------------------------------
+# Name                           Type               Size  Value                                                           
+# ------------------------------------------------------------------------------------------------------------------------
+# req                            uvm_sequence_item  -     @836                                                            
+#   pkt_start_time_ps            real               64    0.000000                                                        
+#   pkt_end_time_ps              real               64    0.000000                                                        
+#   total_bytes                  integral           16    'd68                                                            
+#   no_of_bytes                  integral           16    'd4                                                             
+#   pkt_len                      integral           32    'd17                                                            
+#   pkt_num                      integral           32    'h0                                                             
+#   tdata_q                      da(integral)       17    -                                                               
+#     [0]                        integral           32    'h11223344                                                      
+#     [1]                        integral           32    'h5566aabb                                                      
+#     [2]                        integral           32    'hccddeeff                                                      
+#     [3]                        integral           32    'h800                                                           
+#     [4]                        integral           32    'haaaaaaaa                                                      
+#     ...                        ...                ...   ...                                                             
+#     [12]                       integral           32    'haaaaaaaa                                                      
+#     [13]                       integral           32    'haaaaaaaa                                                      
+#     [14]                       integral           32    'haaaaaaaa                                                      
+#     [15]                       integral           32    'haaaadead                                                      
+#     [16]                       integral           32    'hbeef0000                                                      
+#   tkeep_q                      da(integral)       17    -                                                               
+#     [0]                        integral           4     'hf                                                             
+#     [1]                        integral           4     'hf                                                             
+#     [2]                        integral           4     'hf                                                             
+#     [3]                        integral           4     'hf                                                             
+#     [4]                        integral           4     'hf                                                             
+#     ...                        ...                ...   ...                                                             
+#     [12]                       integral           4     'hf                                                             
+#     [13]                       integral           4     'hf                                                             
+#     [14]                       integral           4     'hf                                                             
+#     [15]                       integral           4     'hf                                                             
+#     [16]                       integral           4     'hf                                                             
+#   tuser                        integral           32    'hbb94bc58                                                      
+#   begin_time                   time               64    10000                                                           
+#   depth                        int                32    'd2                                                             
+#   parent sequence (name)       string             8     conv_seq                                                        
+#   parent sequence (full name)  string             64    uvm_test_top.env.master_uvc.master_agent[0].master_seqr.conv_seq
+#   sequencer                    string             55    uvm_test_top.env.master_uvc.master_agent[0].master_seqr         
+# ------------------------------------------------------------------------------------------------------------------------
+# 
+# after drive in interace
+# before driver call get next item
+# seq start
+# UVM_INFO ../TEST/mac_ipv4_seq.svh(22) @ 405000: uvm_test_top.env.mac_ag.sequencer@@seq_h [mac_ipv4_seq] Starting MAC minimum packet (randomized with fixed constraints)...
+# ------------------------------------------------------------------------------------------
+# Name                           Type          Size  Value                                  
+# ------------------------------------------------------------------------------------------
+# pkt                            mac_seq_item  -     @894                                   
+#   dst_mac                      integral      48    'h112233445566                         
+#   src_mac                      integral      48    'haabbccddeeff                         
+#   vlan_id                      integral      12    'd0                                    
+#   pcp                          integral      3     'd0                                    
+#   dei                          integral      1     'd0                                    
+#   eth_type                     integral      16    'h800                                  
+#   payload                      da(integral)  46    -                                      
+#     [0]                        integral      8     'haa                                   
+#     [1]                        integral      8     'haa                                   
+#     [2]                        integral      8     'haa                                   
+#     [3]                        integral      8     'haa                                   
+#     [4]                        integral      8     'haa                                   
+#     ...                        ...           ...   ...                                    
+#     [41]                       integral      8     'haa                                   
+#     [42]                       integral      8     'haa                                   
+#     [43]                       integral      8     'haa                                   
+#     [44]                       integral      8     'haa                                   
+#     [45]                       integral      8     'haa                                   
+#   fcs                          integral      32    'hdeadbeef                             
+#   begin_time                   time          64    405000                                 
+#   depth                        int           32    'd2                                    
+#   parent sequence (name)       string        5     seq_h                                  
+#   parent sequence (full name)  string        39    uvm_test_top.env.mac_ag.sequencer.seq_h
+#   sequencer                    string        33    uvm_test_top.env.mac_ag.sequencer      
+# ------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------
+# Name                           Type               Size  Value                                                           
+# ------------------------------------------------------------------------------------------------------------------------
+# req                            uvm_sequence_item  -     @898                                                            
+#   pkt_start_time_ps            real               64    0.000000                                                        
+#   pkt_end_time_ps              real               64    0.000000                                                        
+#   total_bytes                  integral           16    'd0                                                             
+#   no_of_bytes                  integral           16    'd0                                                             
+#   pkt_len                      integral           32    'd0                                                             
+#   pkt_num                      integral           32    'h0                                                             
+#   tdata_q                      da(integral)       0     -                                                               
+#   tkeep_q                      da(integral)       0     -                                                               
+#   tuser                        integral           32    'h0                                                             
+#   depth                        int                32    'd2                                                             
+#   parent sequence (name)       string             8     conv_seq                                                        
+#   parent sequence (full name)  string             64    uvm_test_top.env.master_uvc.master_agent[0].master_seqr.conv_seq
+#   sequencer                    string             55    uvm_test_top.env.master_uvc.master_agent[0].master_seqr         
+# ------------------------------------------------------------------------------------------------------------------------
+# req after create
+# req after start
+# after convert
+# pkt_len=17
+# total_bytes_temp = 68, j = 4
+# total_bytes_temp = 64, j = 4
+# total_bytes_temp = 60, j = 4
+# total_bytes_temp = 56, j = 4
+# total_bytes_temp = 52, j = 4
+# total_bytes_temp = 48, j = 4
+# total_bytes_temp = 44, j = 4
+# total_bytes_temp = 40, j = 4
+# total_bytes_temp = 36, j = 4
+# total_bytes_temp = 32, j = 4
+# total_bytes_temp = 28, j = 4
+# total_bytes_temp = 24, j = 4
+# total_bytes_temp = 20, j = 4
+# total_bytes_temp = 16, j = 4
+# total_bytes_temp = 12, j = 4
+# total_bytes_temp = 8, j = 4
+# total_bytes_temp = 4, j = 4
+# after rendomize
+# UVM_INFO ../ENV/mac_agent/mac_to_axi_seq.svh(53) @ 405000: uvm_test_top.env.master_uvc.master_agent[0].master_seqr@@conv_seq [MAC_TO_AXI_SEQ] MAC size=17 | data_q size=17 | tdata_q size=17
+# afte info
+# after driver call get next item
+# UVM_INFO ../ENV/axi_agent/axi_str_mas_driver.sv(67) @ 405000: uvm_test_top.env.master_uvc.master_agent[0].master_drv [uvm_test_top.env.master_uvc.master_agent[0].master_drv] req data in driver : ------------------------------------------------------------------------------------------------------------------------
+# Name                           Type               Size  Value                                                           
+# ------------------------------------------------------------------------------------------------------------------------
+# req                            uvm_sequence_item  -     @898                                                            
+#   pkt_start_time_ps            real               64    0.000000                                                        
+#   pkt_end_time_ps              real               64    0.000000                                                        
+#   total_bytes                  integral           16    'd68                                                            
+#   no_of_bytes                  integral           16    'd4                                                             
+#   pkt_len                      integral           32    'd17                                                            
+#   pkt_num                      integral           32    'h0                                                             
+#   tdata_q                      da(integral)       17    -                                                               
+#     [0]                        integral           32    'h11223344                                                      
+#     [1]                        integral           32    'h5566aabb                                                      
+#     [2]                        integral           32    'hccddeeff                                                      
+#     [3]                        integral           32    'h800                                                           
+#     [4]                        integral           32    'haaaaaaaa                                                      
+#     ...                        ...                ...   ...                                                             
+#     [12]                       integral           32    'haaaaaaaa                                                      
+#     [13]                       integral           32    'haaaaaaaa                                                      
+#     [14]                       integral           32    'haaaaaaaa                                                      
+#     [15]                       integral           32    'haaaadead                                                      
+#     [16]                       integral           32    'hbeef0000                                                      
+#   tkeep_q                      da(integral)       17    -                                                               
+#     [0]                        integral           4     'hf                                                             
+#     [1]                        integral           4     'hf                                                             
+#     [2]                        integral           4     'hf                                                             
+#     [3]                        integral           4     'hf                                                             
+#     [4]                        integral           4     'hf                                                             
+#     ...                        ...                ...   ...                                                             
+#     [12]                       integral           4     'hf                                                             
+#     [13]                       integral           4     'hf                                                             
+#     [14]                       integral           4     'hf                                                             
+#     [15]                       integral           4     'hf                                                             
+#     [16]                       integral           4     'hf                                                             
+#   tuser                        integral           32    'h68c52244                                                      
+#   begin_time                   time               64    405000                                                          
+#   depth                        int                32    'd2                                                             
+#   parent sequence (name)       string             8     conv_seq                                                        
+#   parent sequence (full name)  string             64    uvm_test_top.env.master_uvc.master_agent[0].master_seqr.conv_seq
+#   sequencer                    string             55    uvm_test_top.env.master_uvc.master_agent[0].master_seqr         
+# ------------------------------------------------------------------------------------------------------------------------
+# 
+# after drive in interace
+# before driver call get next item
+#               615000after start
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 615000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   11
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [MAC_TO_AXI_SEQ]     2
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [mac_ipv4_seq]     2
+# [uvm_test_top.env.master_uvc.master_agent[0].master_drv]     2
+# ** Note: $finish    : /tools/mentor/questa/2023.4/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 615 ns  Iteration: 63  Instance: /top
+# End time: 23:08:43 on Oct 09,2025, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 1
